@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://pfmycd0d808c"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_ynelp"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_uya3l"]
+[ext_resource type="PackedScene" uid="uid://de236xwuwk4je" path="res://pig 2.glb" id="2_xikdm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sc5aw"]
 
@@ -10,11 +9,11 @@
 script = ExtResource("1_ynelp")
 SPEED = 8.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_uya3l")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_sc5aw")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.941647, 0.336602, 0, -0.336602, 0.941647, 0, 1, 1.95028)
+
+[node name="pig 2" parent="." instance=ExtResource("2_xikdm")]
+transform = Transform3D(0.000342065, 0, 0.4, 0, 0.4, 0, -0.4, 0, 0.000342065, 0, 0, 0)
