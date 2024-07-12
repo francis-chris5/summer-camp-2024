@@ -1,9 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1720712666
+::res://::1720795881
 character_body_3d.gd::GDScript::-1::1720629720::0::1::::<>CharacterBody3D<>::
-character_body_3d.tscn::PackedScene::1063926117130034912::1720707696::0::1::::<><>::res://character_body_3d.gd<>uid://brivco8c4r5fo::::res://pig.glb
+character_body_3d.tscn::PackedScene::1063926117130034912::1720791234::0::1::::<><>::res://character_body_3d.gd<>uid://de236xwuwk4je::::res://pig 2.glb
 ground.glb::PackedScene::6058330969450968126::1720617802::1720618059::1::::<><>::
 icon.svg::CompressedTexture2D::8722471686190186561::1720617802::1720618057::1::::<><>::
-node_3d.tscn::PackedScene::2547124910871337860::1720707696::0::1::::<><>::uid://cskx3c1q3p1ty::::res://ground.glb<>uid://pfmycd0d808c::::res://character_body_3d.tscn
-pig 2.glb::PackedScene::7497512303360844634::1720712666::1720712668::1::::<><>::
+node_3d.tscn::PackedScene::2547124910871337860::1720791233::0::1::::<><>::uid://cskx3c1q3p1ty::::res://ground.glb<>uid://pfmycd0d808c::::res://character_body_3d.tscn
+pig 2.glb::PackedScene::7497512303360844634::1720712666::1720712966::1::::<><>::
 pig.glb::PackedScene::3597425462443810696::1720706313::1720706314::1::::<><>::
+tree.glb::PackedScene::5035932463736958890::1720795881::1720795884::1::::<><>::

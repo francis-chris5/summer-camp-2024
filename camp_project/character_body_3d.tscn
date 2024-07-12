@@ -1,9 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://pfmycd0d808c"]
+[gd_scene load_steps=7 format=3 uid="uid://pfmycd0d808c"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_ynelp"]
 [ext_resource type="PackedScene" uid="uid://de236xwuwk4je" path="res://pig 2.glb" id="2_xikdm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sc5aw"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t7o3r"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vntyy"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ufr1y"]
+states/idle/node = SubResource("AnimationNodeAnimation_t7o3r")
+states/idle/position = Vector2(376, 132.667)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_vntyy")]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_ynelp")
@@ -17,3 +28,15 @@ transform = Transform3D(1, 0, 0, 0, 0.941647, 0.336602, 0, -0.336602, 0.941647, 
 
 [node name="pig 2" parent="." instance=ExtResource("2_xikdm")]
 transform = Transform3D(0.000342065, 0, 0.4, 0, 0.4, 0, -0.4, 0, 0.000342065, 0, 0, 0)
+
+[node name="Skeleton3D" parent="pig 2/Armature" index="0"]
+bones/2/rotation = Quaternion(0.0209393, -0.0371614, 0.011385, 0.999025)
+bones/4/rotation = Quaternion(0.596465, 0.13387, -0.174359, 0.77195)
+bones/6/rotation = Quaternion(-0.431597, -0.269786, -0.132505, 0.850519)
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../pig 2")
+tree_root = SubResource("AnimationNodeStateMachine_ufr1y")
+anim_player = NodePath("../pig 2/AnimationPlayer")
+
+[editable path="pig 2"]
